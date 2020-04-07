@@ -1,0 +1,23 @@
+{
+  "name": "user-signup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/davigsa/user-signup.git",
+  "author": "Davi <davi.goulartsa@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server/index.js",
+    "start": "node src/server/index.js",
+    "prettier": "prettier --write src/*/*.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "prettier": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
