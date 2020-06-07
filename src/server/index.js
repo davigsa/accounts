@@ -1,20 +1,18 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 const routes = require('./routes');
 
 const server = express();
 const port = 3333;
 
-mongoose.connect(
-  'mongodb+srv://davigsa:lekinha@mongodbfree-pvern.mongodb.net/test?retryWrites=true&w=majority',
-  {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-);
+mongoose.connect(process.env.MONGOOSE_URL, {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
